@@ -1,0 +1,37 @@
+<project default="create-sql-only" basedir="." name="showdemo">
+
+	<property name="ant-lib" value="C:/javawork2018/ant-lib" />
+	<property name="src" value="src/main/java" />
+	<property name="bin" value="target/classes" />
+	<property name="sqlfile" value="db/init_schema.sql" />
+
+	<path id="lib.classpath">
+		<fileset dir="${ant-lib}">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement path="${bin}" />
+	</path>
+
+	<taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask" classpathref="lib.classpath" />
+
+	<target name="create-sql-only">
+		<hibernatetool destdir=".">
+			<annotationconfiguration configurationfile="${src}/hibernate.cfg.xml" />
+			<hbm2ddl export="false" drop="true" outputfilename="${sqlfile}" />
+		</hibernatetool>
+	</target>
+
+	<target name="setup-db">
+		<hibernatetool destdir=".">
+			<annotationconfiguration configurationfile="${src}/hibernate.cfg.xml" />
+			<hbm2ddl outputfilename="${sqlfile}" drop="true" />
+		</hibernatetool>
+	</target>
+
+	<target name="update-db">
+		<hibernatetool destdir=".">
+			<annotationconfiguration configurationfile="${src}/hibernate.cfg.xml" />
+			<hbm2ddl update="true" />
+		</hibernatetool>
+	</target>
+</project>

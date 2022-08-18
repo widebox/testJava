@@ -1,0 +1,86 @@
+<t:border xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+	xmlns:p="tapestry:parameter">
+	<div class="page-head">
+		<h2 class="pull-left">
+			<i class="fa fa-folder-open-o"></i> ${message:student-listing}
+		</h2>
+		<div class="clearfix"></div>
+	</div>
+	<div class="matter">
+		<div class="search-well well">
+			<t:form t:id="searchForm" t:autofocus="false"
+				t:clientValidation="NONE">
+				<div class="row">
+					<div class="form-group col-xs-3">
+						<label class="control-label">${message:birthdate-label}</label>
+						<div class="input-group input-append date datepicker">
+							<input t:id="beginBirthdate" t:type="textfield"
+								t:value="beginBirthdate" placeholder="${dateFormat}" />
+							<div class="input-group-addon">
+								<i class="fa fa-calendar"></i>
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-xs-3">
+						<label class="control-label">${message:to}</label>
+						<div class="input-group input-append date datepicker">
+							<input t:id="endBirthdate" t:type="textfield"
+								t:value="endBirthdate" placeholder="${dateFormat}" />
+							<div class="input-group-addon">
+								<i class="fa fa-calendar"></i>
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-xs-3">
+						<t:label for="no" />
+						<t:textfield t:id="no" t:value="example.no" />
+					</div>
+					<div class="form-group col-xs-3">
+						<t:label for="name" />
+						<t:textfield t:id="name" t:value="example.name" />
+					</div>
+					<div class="form-group col-xs-3">
+						<t:label for="gender" />
+						<t:select t:id="gender" t:value="example.gender"
+							t:blankOption="always" />
+					</div>
+					<div class="form-group col-xs-3">
+						<t:label for="province" />
+						<t:select t:id="province" t:value="provinceId"
+							t:blankOption="always" t:model="provinceModel" />
+					</div>
+					<!-- <div class="form-group col-xs-3">
+						<t:label for="city" />
+						<t:select t:id="city" t:value="cityId" t:blankOption="always"
+							t:model="cityModel" />
+					</div> -->
+					<div class="form-group col-xs-3">
+						<t:label for="cityName" />
+						<t:textfield t:id="cityName" t:value="cityName" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 btn-toolbar">
+						<input t:id="search" t:type="submit" t:value="${message:search}"
+							class="btn btn-primary" /> <input t:id="clear" t:type="submit"
+							t:value="${message:clear}" class="btn btn-default" />
+					</div>
+				</div>
+			</t:form>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<t:mygrid t:id="grid" t:addPage="StudentDetails"
+					t:addLinkText="message:add" t:source="rows" t:row="row"
+					t:rowsPerPage="10" t:pagerPosition="both" t:add="operation"
+					t:include="no,name,gender,birthdate,age,provinceName,cityName">
+					<p:birthdateCell>${row.birthdateText}</p:birthdateCell>
+					<p:operationCell>
+						<a t:type="pagelink" t:page="StudentDetails" t:context="row.id"
+							class="btn btn-primary btn-sm"><i class="fa fa-eye"></i>${message:view}</a>
+					</p:operationCell>
+				</t:mygrid>
+			</div>
+		</div>
+	</div>
+</t:border>

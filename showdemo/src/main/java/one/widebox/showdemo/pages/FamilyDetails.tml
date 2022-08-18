@@ -1,0 +1,55 @@
+<t:border xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+	xmlns:p="tapestry:parameter">
+	<div class="page-head">
+		<h2 class="pull-left">
+			<i class="fa fa-file-o"></i> ${message:family-details}
+		</h2>
+		<ol class="breadcrumb pull-right">
+			<li><a t:type="pagelink" t:page="StudentListing">${message:student-listing}</a></li>
+			<li><a t:type="pagelink" t:page="StudentDetails"
+				t:context="studentId">${studentDetails}</a></li>
+			<li class="active">${detailsLabel}</li>
+		</ol>
+		<div class="clearfix"></div>
+	</div>
+	<div class="matter">
+		<t:form t:id="detailsForm" t:clientValidation="SUBMIT"
+			t:autoFocus="false">
+			<div class="row">
+				<div class="col-xs-12">
+					<t:errors t:id="errors" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3 form-group">
+					<t:label t:for="name" />
+					<t:textfield t:id="name" t:value="row.name" />
+				</div>
+				<div class="col-xs-3 form-group">
+					<t:label t:for="gender" />
+					<t:select t:id="gender" t:value="row.gender" t:blankOption="never" />
+				</div>
+				<div class="col-xs-3 form-group">
+					<t:label t:for="tel" />
+					<t:textfield t:id="tel" t:value="row.tel" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 btn-toolbar">
+					<a t:type="linksubmit" class="btn btn-primary"><i
+						class="fa fa-floppy-o"></i>${message:save}</a>
+					<t:if test="row.id">
+						<a class="btn btn-danger" data-toggle="modal"
+							data-target="#confirm-model"><i class="fa fa-trash-o">
+								${message:delete}</i></a>
+					</t:if>
+				</div>
+			</div>
+		</t:form>
+	</div>
+	<t:ConfirmDialog t:confirmTitle="${message:confirm-delete-title}"
+		t:confirmMessage="${message:confirm-delete-message}">
+		<a t:id="delete" t:type="actionlink" t:context="row.id"
+			class="btn btn-primary primary">${message:confirm}</a>
+	</t:ConfirmDialog>
+</t:border>
