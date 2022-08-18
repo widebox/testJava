@@ -1,0 +1,24 @@
+<div xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+	xmlns:p="tapestry:parameter">
+	<div class="page-head">
+		<h2 class="pull-left">
+			<i class="fa fa-folder-open-o"></i> ${message:user-parameter}
+		</h2>
+		<div class="clearfix"></div>
+	</div>
+	<div class="matter">
+		<t:alerts />
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="account-info">
+					<ul class="list-group">
+						<li class="list-group-item"><span class="account-value">${user.username}</span>
+							<b>${message:username-label}</b></li>
+						<li class="list-group-item"><span class="account-value">${statusText}</span>
+							<b>${message:status-label}</b></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

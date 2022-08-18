@@ -1,0 +1,300 @@
+* {
+	font-family: Arial, Helvetica, 宋体, 微軟正黑體, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Arial, Helvetica, 宋体, 微軟正黑體, sans-serif;
+	padding: 2px 0;
+	margin: 2px 0;
+}
+
+.navbar-collapse {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.navbar {
+	margin-bottom: 0;
+	min-width: 0;
+}
+
+.navbar-break {
+	height: 0;
+}
+
+.alert>ul {
+	padding-left: 20px;
+}
+
+.sub-navbar {
+	margin: 55px 0 0;
+	min-height: 30px !important;
+	border: 0 !important;
+}
+
+.sub-navbar .container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.sub-navbar .navbar-nav>li>a {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+}
+
+.sub-navbar .navbar-nav>li.active a {
+	padding-bottom: 2px !important;
+	border-bottom: 3px solid #31b0d5;
+	color: #31b0d5;
+	background-color: #fff;
+}
+
+.sub-navbar .navbar {
+	min-height: 32px !important
+}
+
+.mainbar {
+	min-height: 400px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin-top: 51px;
+}
+
+.mainbar .page-head {
+	background-color: #f8f8f8;
+	padding: 8px 20px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	box-shadow: inset 0 1px 1px #fff;
+}
+
+.mainbar .page-head h2 {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.mainbar .page-head>.breadcrumb {
+	padding: 0;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	list-style: none;
+	background-color: #f5f5f5;
+	border-radius: 4px;
+}
+
+.mainbar .matter {
+	padding: 15px;
+}
+
+.home-page .btn-block {
+	font-size: 30px;
+	padding: 20px;
+	margin: 15px 0;
+}
+
+.reports-page .btn-block {
+	font-size: 24px;
+	padding: 20px;
+	margin: 15px 0;
+}
+
+.footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #337ab7;
+}
+
+.footer p {
+	color: #fff;
+	margin: 0;
+}
+
+.footer a.lang {
+	color: #fff;
+	margin: 0 5px;
+}
+
+.form-control[disabled], fieldset[disabled] .form-control {
+	cursor: default;
+	background-color: #eee;
+}
+
+input.form-control[disabled], fieldset[disabled] input.form-control {
+	cursor: text;
+}
+
+a i.fa {
+	margin-right: 5px;
+}
+
+.dropdown-menu a i.fa {
+	width: 14px;
+}
+
+.grid-wrapper>.row {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.grid-wrapper .grid-total-records {
+	padding-top: 7px;
+	margin-bottom: 7px;
+	margin-right: 20px;
+	display: inline-block;
+}
+
+.grid-wrapper .grid-add-btn-wrapper {
+	display: inline-block;
+}
+
+.grid-wrapper .grid-summary-row .add-on-btn {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.grid-wrapper .table {
+	margin: 0px;
+}
+
+.grid-wrapper .pagination {
+	float: right;
+	margin: 10px 0;
+}
+
+.grid-wrapper table tr td {
+	vertical-align: middle;
+	padding: 6px;
+}
+
+.grid-wrapper table tr td a {
+	margin-left: 5px;
+}
+
+.grid-wrapper table tr td a:first-child {
+	margin-left: 0;
+}
+
+table td[data-grid-property="operation"] .btn.btn-sm {
+	padding: 2px 6px;
+}
+
+.account-info .list-group {
+	max-width: 350px;
+}
+
+.account-info .account-value {
+	float: right;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.clear, .clearer {
+	clear: both;
+}
+
+.t-invisible, .hide {
+	display: none;
+}
+
+input[type=checkbox] {
+	margin: 5px;
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+}
+
+table.table tbody tr td>a {
+	display: table-cell;
+	margin-right: 4px;
+}
+
+.form-group .readonly {
+	background-color: #eee;
+}
+
+.help-block {
+	margin-bottom: 0;
+}
+
+td.error {
+	color: red;
+}
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.status_normal {
+	color: inherit;
+}
+
+.status_warning {
+	color: #CC9900;
+}
+
+.status_error {
+	color: #f00;
+}
+
+.late {
+	color: purple;
+}
+
+table.bean-display {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-collapse: collapse;
+	border-left: 1px solid silver;
+	border-top: silver solid 1px;
+}
+
+table.bean-display td {
+	border-right: 1px solid silver;
+	border-bottom: 1px solid silver;
+	padding: 6px 8px;
+}
+
+div[data-container-type="alerts"] .pull-right {
+	display: none;
+}
+
+.login-section {
+	width: 100%;
+	max-width: 400px;
+	margin: 10px auto;
+}
+
+.login-section .logo {
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.login-section h2 {
+	text-align: center;
+	padding-top: 0px;
+	padding-bottom: 10px;
+	font-weight: 600;
+}
+
+.login-section .panel .panel-heading {
+	text-align: center;
+}
+
+.login-section .btn-block {
+	margin-top: 30px;
+}
+
+.login-section .copyright-content {
+	text-align: center;
+	color: #337ab7;
+	font-size: 16px;
+}

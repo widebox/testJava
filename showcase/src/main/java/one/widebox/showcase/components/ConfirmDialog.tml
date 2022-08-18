@@ -1,0 +1,21 @@
+<div xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+	class="modal fade" id="${targetId}" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">${confirmTitle}</h4>
+			</div>
+			<div class="modal-body">
+				<p>${confirmMessage}</p>
+				<p class="debug-url"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">${cancelBtnLabel}</button>
+				<t:body />
+			</div>
+		</div>
+	</div>
+</div>
